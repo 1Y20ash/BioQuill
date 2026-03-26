@@ -1,5 +1,5 @@
 const user = JSON.parse(localStorage.getItem("user"));
-fetch("http://localhost:3000/products")
+fetch("https://your-backend-url.onrender.com/products")
 .then(res => res.json())
 .then(data => {
     const container = document.getElementById("products");
