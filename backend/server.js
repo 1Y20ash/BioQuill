@@ -15,21 +15,16 @@ app.use(express.json());
 // ✅ Database connection
 
 const db = mysql.createPool({
-    host: 'your-online-host',
-    user: 'your-username',
-    password: 'your-password',
-    database: 'your-database',
+    host: 'tramway.proxy.rlwy.net',
+    user: 'root',
+    password: 'qnzQcMUlmHCKlvSAwtgKtpHblXabwuvi', 
+    database: 'railway',
+    port: 16062,
     waitForConnections: true,
     connectionLimit: 10
 });
 
-db.connect(err => {
-    if (err) {
-        console.log("DB Error:", err);
-    } else {
-        console.log("Database Connected ✅");
-    }
-});
+
 
 // ✅ Routes
 app.get('/products', (req, res) => {
