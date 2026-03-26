@@ -1,0 +1,39 @@
+<h2>Admin Panel</h2>
+
+<input id="name" placeholder="Product Name"><br>
+<input id="price" placeholder="Price"><br>
+<input id="stock" placeholder="Stock"><br>
+
+<button onclick="addProduct()">Add Product</button>
+<nav>
+    <h2>BioQuill 🖊️</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="login.html" id="loginLink">Login</a>
+        <button onclick="logout()" id="logoutBtn">Logout</button>
+    </div>
+</nav>
+<script>
+function addProduct() {
+    fetch("http://localhost:3000/products", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            name: document.getElementById("name").value,
+            price: document.getElementById("price").value,
+            stock: document.getElementById("stock").value,
+            description: "Admin added product"
+        })
+    })
+    .then(res => res.text())
+    .then(data => alert(data));
+}
+
+const user = localStorage.getItem("user");
+
+if (!user) {
+    alert("Please login first");
+    window.location.href = "login.html";
+}
+</script>

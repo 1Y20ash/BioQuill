@@ -1,0 +1,266 @@
+/* 🌈 Global Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+}
+
+/* 🔥 Navbar */
+nav {
+    backdrop-filter: blur(10px);
+    background: rgba(30, 30, 47, 0.8);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00e676;
+}
+
+/* 🧠 Heading */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+/* 👋 Welcome Text */
+#welcome {
+    text-align: center;
+    color: #2e7d32;
+}
+
+/* 🛍 Product Grid */
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+/* 💎 Product Card */
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* 🖊 Product Name */
+.card h3 {
+    margin: 10px 0;
+}
+
+/* 💰 Price */
+.card p {
+    margin: 5px 0;
+}
+
+/* 🛒 Button */
+button {
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #00c853, #64dd17);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #00e676, #76ff03);
+}
+
+/* 🔐 Logout Button */
+#logoutBtn {
+    background: #ff5252;
+}
+
+#logoutBtn:hover {
+    background: #ff1744;
+}
+body {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+button:active {
+    transform: scale(0.95);
+}
+.card:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 100, 0.4);
+}
+/* 🔐 Form Container */
+.form-container {
+    width: 300px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+/* 🧾 Inputs */
+.form-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* Links */
+.form-container a {
+    color: #00c853;
+    text-decoration: none;
+}
+/* 🛒 Cart Container */
+.cart-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 💎 Cart Card */
+.cart-card {
+    width: 320px;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.cart-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔘 Buttons inside cart */
+.cart-actions button {
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+/* 💰 Total */
+.total {
+    margin-top: 20px;
+    color: #2e7d32;
+}
+button:last-child {
+    margin-top: 20px;
+    background: linear-gradient(45deg, #2962ff, #00b0ff);
+}
+/* 🔻 Footer */
+.footer {
+    margin-top: 40px;
+    background: rgba(30, 30, 47, 0.9);
+    color: white;
+    padding: 30px 20px;
+    backdrop-filter: blur(10px);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    max-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.footer-section a {
+    color: #00e676;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom line */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+/* 🔗 Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+/* 🔥 Hover Effects */
+.social-icons a:hover {
+    color: #00e676;
+    transform: scale(1.2);
+}
+
+/* Icon spacing */
+.footer-section i {
+    margin-right: 8px;
+}

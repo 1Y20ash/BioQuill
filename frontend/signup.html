@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav>
+    <h2>BioQuill 🖊️</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="login.html" id="loginLink">Login</a>
+       
+    </div>
+</nav>
+
+<div class="form-container">
+    <h2>Create Account ✨</h2>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="signup()">Signup</button>
+
+    <p>Already have account? <a href="login.html">Login</a></p>
+</div>
+
+<script>
+function signup() {
+    fetch("http://localhost:3000/signup", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value
+        })
+    })
+    .then(res => res.text())
+    .then(data => alert(data));
+}
+</script>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>BioQuill 🖊️</h3>
+            <p>Eco-friendly pens designed for a sustainable future 🌱</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Features</h4>
+            <ul>
+                <li><i class="fa-solid fa-leaf"></i> Biodegradable Materials</li>
+                <li><i class="fa-solid fa-recycle"></i> Refillable Ink</li>
+                <li><i class="fa-solid fa-pen"></i> Smooth Writing</li>
+                <li><i class="fa-solid fa-globe"></i> Eco Friendly</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/1y2ash" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/yourusername" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">© 2026 BioQuill | Made by Yash 🚀</p>
+</footer>
+</body>
+</html>
