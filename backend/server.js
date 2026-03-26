@@ -13,7 +13,6 @@ app.use(cors({
 app.use(express.json());
 
 // ✅ Database connection
-const mysql = require('mysql2');
 
 const db = mysql.createPool({
     host: 'your-online-host',
@@ -50,7 +49,7 @@ app.post('/signup', async (req, res) => {
     const { name, email, password } = req.body;
 
     try {
-        const bcrypt = require('bcrypt'); // ensure inside or top
+        
         console.log("BODY:", req.body);
 
         const hashedPassword = await bcrypt.hash(password, 10);
