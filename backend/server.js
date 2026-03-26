@@ -35,9 +35,7 @@ app.get('/products', (req, res) => {
 // ✅ Server
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log("Server running on port " + PORT);
-});
+
 
 
 app.post('/signup', async (req, res) => {
@@ -100,4 +98,12 @@ app.post('/login', (req, res) => {
             }
         }
     );
+});
+
+app.get('/', (req, res) => {
+    res.send("🚀 Backend is LIVE");
+});
+
+app.listen(PORT, () => {
+    console.log("Server running on port " + PORT);
 });
