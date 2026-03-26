@@ -4,8 +4,9 @@
     <title>BioQuill Store</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-     
 </head>
+
+<body>
 
 <nav>
     <h2>BioQuill 🖊️</h2>
@@ -16,26 +17,16 @@
         <button onclick="logout()" id="logoutBtn">Logout</button>
     </div>
 </nav>
+
 <h1>Eco-Friendly Pen Store 🌱</h1>
+<h3 id="welcome"></h3>
 
-<h3 id="welcome"></h3> 
-<body>
+<div id="products"></div>
 
-    <h1>BioQuill Pen Store 🖊️</h1>
+<!-- ✅ Correct Script Usage -->
+<script src="script.js"></script>
 
-    <div id="products"></div>
-
-    <script src="script.js">
-        // At TOP of cart.js
-const user = localStorage.getItem("user");
-
-if (!user) {
-    alert("Please login first");
-    window.location.href = "login.html";
-}
-    </script>
-    
-    <footer class="footer">
+<footer class="footer">
     <div class="footer-container">
 
         <div class="footer-section">
@@ -65,28 +56,17 @@ if (!user) {
         <div class="footer-section">
             <h4>Follow Us</h4>
             <div class="social-icons">
-    <a href="https://www.facebook.com" target="_blank">
-        <i class="fa-brands fa-facebook"></i>
-    </a>
-
-    <a href="https://www.instagram.com" target="_blank">
-        <i class="fa-brands fa-instagram"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/in/1y2ash" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
-
-    <a href="https://github.com/yourusername" target="_blank">
-        <i class="fa-brands fa-github"></i>
-    </a>
-</div>
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/1y2ash" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/yourusername" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
 
     </div>
 
     <p class="footer-bottom">© 2026 BioQuill | Made by Yash 🚀</p>
 </footer>
-</body>
 
+</body>
 </html>

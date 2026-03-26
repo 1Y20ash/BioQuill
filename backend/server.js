@@ -6,6 +6,11 @@ const bcrypt = require('bcrypt');
 const app = express();
 
 app.use(cors());
+app.use(cors({
+    origin: "https://bioquill.netlify.app",
+    methods: ["GET", "POST"],
+    credentials: true
+}));
 app.use(express.json());
 
 // ✅ Database connection
