@@ -101,6 +101,25 @@ app.post('/login', (req, res) => {
         }
     );
 });
+app.post('/products', (req, res) => {
+    const { name, price, stock, description } = req.body;
+
+    if (!name || !price || !stock) {
+        return res.status(400).send("All fields required");
+    }
+
+    db.query(
+        "INSERT INTO Products (name, price, stock, description) VALUES (?, ?, ?, ?)",
+        [name, price, stock, description],
+        (err, result) => {
+            if (err) {
+                console.log(err);
+                return res.status(500).send("Error adding product");
+            }
+            res.send("Product added successfully ✅");
+        }
+    );
+});
 
 app.get('/', (req, res) => {
     res.send("🚀 Backend is LIVE");

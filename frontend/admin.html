@@ -16,24 +16,33 @@
 </nav>
 <script>
 function addProduct() {
-    fetch("http://https://your-backend-url.onrender.com:3000/products", {
+    const name = document.getElementById("name").value;
+    const price = document.getElementById("price").value;
+    const stock = document.getElementById("stock").value;
+
+    if (!name || !price || !stock) {
+        alert("All fields required");
+        return;
+    }
+
+    fetch("https://bioquill-backend.onrender.com/products", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
-            name: document.getElementById("name").value,
-            price: document.getElementById("price").value,
-            stock: document.getElementById("stock").value,
+            name,
+            price,
+            stock,
             description: "Admin added product"
         })
     })
     .then(res => res.text())
-    .then(data => alert(data));
-}
-
-const user = localStorage.getItem("user");
-
-if (!user) {
-    alert("Please login first");
-    window.location.href = "login.html";
+    .then(data => {
+        alert(data);
+        
+        // clear inputs
+        document.getElementById("name").value = "";
+        document.getElementById("price").value = "";
+        document.getElementById("stock").value = "";
+    });
 }
 </script>
