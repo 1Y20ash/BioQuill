@@ -5,7 +5,6 @@ const bcrypt = require('bcrypt');
 
 const app = express();
 
-app.use(cors());
 app.use(cors({
     origin: "https://bioquill.netlify.app",
     methods: ["GET", "POST"],
@@ -14,11 +13,15 @@ app.use(cors({
 app.use(express.json());
 
 // ✅ Database connection
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Yash@3106',
-    database: 'BioQuillDB'
+const mysql = require('mysql2');
+
+const db = mysql.createPool({
+    host: 'your-online-host',
+    user: 'your-username',
+    password: 'your-password',
+    database: 'your-database',
+    waitForConnections: true,
+    connectionLimit: 10
 });
 
 db.connect(err => {
