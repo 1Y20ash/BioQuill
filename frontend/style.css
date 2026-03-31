@@ -264,3 +264,65 @@ button:last-child {
 .footer-section i {
     margin-right: 8px;
 }
+/* 🛠 Admin Container */
+.admin-container {
+    width: 350px;
+    margin: 60px auto;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+/* 🧠 Heading */
+.admin-container h2 {
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+/* 🧾 Inputs */
+.admin-container input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* 🔘 Button (matches your global style but aligned properly) */
+/* 🔘 Premium Admin Button */
+.admin-container button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #00c853, #64dd17);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 15px rgba(0, 200, 83, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* ✨ Hover glow effect */
+.admin-container button:hover {
+    transform: translateY(-2px) scale(1.05);
+    background: linear-gradient(135deg, #00e676, #76ff03);
+    box-shadow: 0 10px 25px rgba(0, 255, 100, 0.5);
+}
+
+/* 🔥 Click effect */
+.admin-container button:active {
+    transform: scale(0.96);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
