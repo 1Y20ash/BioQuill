@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const app = express();
 
 app.use(cors({
-    origin: "https://bioquill.netlify.app",
+    origin: "https://bioquill-qizb.onrender.com",
     methods: ["GET", "POST"],
     credentials: true
 }));
